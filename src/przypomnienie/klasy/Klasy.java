@@ -36,6 +36,12 @@ public class Klasy {
         long a = people.stream().filter(person1 -> person.getFirstName().endsWith("a")).count();
         people.stream().filter(person1 -> person.getFirstName().endsWith("a")).collect(Collectors.toList());
 
+        int iloscPelnoletnich = (int) people.stream().filter(person1 -> person1.getAge()>17).count();
+        ArrayList<Person> pelnoletni= (ArrayList<Person>) people.stream().filter(person1 -> person1.getAge()>17).collect(Collectors.toList());
+        for (Person person1 : pelnoletni) {
+            System.out.println(person1.getFirstName()+" "+person1.getLastName()+" "+person1.getAge());
+        }
+        System.out.println(iloscPelnoletnich);
         //w domu
         //sprawdzic ile osob jest pelnoletnich
     }
