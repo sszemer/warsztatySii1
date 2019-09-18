@@ -1,4 +1,4 @@
-package com.company;
+package przypomnienie.tablice;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -27,7 +27,7 @@ public class Main {
         if (start>end) {
             throw new RuntimeException("start nie moze byc wiekszy od konca");
         }
-        if(start>=t.length||end>=t.length){
+        if(start>t.length||end>t.length){
             throw new RuntimeException("indeksy poza zakresem");
         }
         int wielkosc_nowej_tablicy = end - start + 1;
